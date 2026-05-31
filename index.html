@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postres Deliciosos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Postres Deliciosos</h1>
+            <p>Escoge tu postre, personaliza y haz tu pedido con facilidad.</p>
+        </div>
+    </header>
+    <main class="container">
+        <section class="intro">
+            <h2>Postres disponibles</h2>
+            <p>Los postres normales cuestan <strong>5.000 COP</strong> y los personalizados <strong>10.000 COP</strong>.</p>
+        </section>
+        <section class="cards-grid">
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=800&q=80" alt="Tarta de chocolate">
+                <div class="card-body">
+                    <h3>Tarta de Chocolate</h3>
+                    <p>Postre clásico con ganache y fresas.</p>
+                    <p class="price">5.000 COP</p>
+                    <a class="btn" href="#order-section" data-name="Tarta de Chocolate" data-price="5000">Pedir</a>
+                </div>
+            </article>
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1543362906-acfc16c67564?auto=format&fit=crop&w=800&q=80" alt="Cheesecake frutal">
+                <div class="card-body">
+                    <h3>Cheesecake Frutal</h3>
+                    <p>Suave queso crema con coulis de frutos rojos.</p>
+                    <p class="price">5.000 COP</p>
+                    <a class="btn" href="#order-section" data-name="Cheesecake Frutal" data-price="5000">Pedir</a>
+                </div>
+            </article>
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=800&q=80" alt="Brownie con helado">
+                <div class="card-body">
+                    <h3>Brownie con Helado</h3>
+                    <p>Brownie caliente servido con helado de vainilla.</p>
+                    <p class="price">5.000 COP</p>
+                    <a class="btn" href="#order-section" data-name="Brownie con Helado" data-price="5000">Pedir</a>
+                </div>
+            </article>
+        </section>
+        <section class="card custom-card">
+            <h3>Personalizado</h3>
+            <p>Elige tipo de postre, glaseado y crema. Precio: <strong>10.000 COP</strong>.</p>
+            <div class="custom-options">
+                <label>
+                    Tipo de postre
+                    <select id="custom-type">
+                        <option value="Torta">Torta</option>
+                        <option value="Cupcake">Cupcake</option>
+                        <option value="Donut">Donut</option>
+                    </select>
+                </label>
+                <label>
+                    Glaseado
+                    <select id="custom-glaze">
+                        <option value="Chocolate">Chocolate</option>
+                        <option value="Vainilla">Vainilla</option>
+                        <option value="Fresa">Fresa</option>
+                    </select>
+                </label>
+                <label>
+                    Crema
+                    <select id="custom-cream">
+                        <option value="Chantilly">Chantilly</option>
+                        <option value="Crema pastelera">Crema pastelera</option>
+                        <option value="Queso crema">Queso crema</option>
+                    </select>
+                </label>
+            </div>
+            <a class="btn" href="#order-section">Personalizar</a>
+        </section>
+        <section id="order-section" class="order-section">
+            <h2>Formulario de pedido</h2>
+            <p id="order-summary"></p>
+            <form id="order-form" action="#thanks-section" method="get">
+                <label>Nombre completo
+                    <input id="nombre" type="text" name="nombre" required>
+                </label>
+                <label>Correo electrónico
+                    <input id="correo" type="email" name="correo" required>
+                </label>
+                <label>Número de teléfono
+                    <input id="telefono" type="tel" name="telefono" required>
+                </label>
+                <label>Dirección
+                    <input id="direccion" type="text" name="direccion" required>
+                </label>
+                <label>Mensaje para el postre
+                    <textarea id="mensaje" name="mensaje" placeholder="Escribe un mensaje bonito para tu postre"></textarea>
+                </label>
+                <label>Método de pago
+                    <select id="pago" name="pago" required>
+                        <option value="Tarjeta">Tarjeta</option>
+                        <option value="Efectivo">Efectivo</option>
+                        <option value="Transferencia">Transferencia</option>
+                    </select>
+                </label>
+                <button type="submit" class="btn submit-btn">Confirmar pedido</button>
+            </form>
+        </section>
+        <section id="thanks-section" class="thanks-section hidden">
+            <h2>¡Gracias por tu pedido!</h2>
+            <p id="thanks-message"></p>
+        </section>
+    </main>
+    <footer>
+        <p>© 2026 Postres Deliciosos. Tu postre llega con amor.</p>
+    </footer>
+</body>
+</html>
